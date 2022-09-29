@@ -23,10 +23,10 @@ def load_model_with_weights(url):
     ### Need to download the weights file from url, if it's not already
     ### present, and put the downloaded filename into a variable
     ### called weights_filename
+    url = 'https://connectionsworkshop.blob.core.windows.net/pollen/pollen_93.67.h5'
     weights_filename = get_file(
             'pollen',
-            'url')
-    # url = https://connectionsworkshop.blob.core.windows.net/pollen/pollen_93.67.h5
+            url)
     model = tf.keras.models.load_model(weights_filename)
     return model
 
