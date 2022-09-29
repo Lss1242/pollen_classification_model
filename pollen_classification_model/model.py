@@ -57,7 +57,7 @@ class efficientNetB3:
     ### to self.model
     
     def __init__(self):
-        self.load_model_with_weights = load_model_with_weights(self)
+        self.model = load_model_with_weights(self)
     
 
     def predict(self, image: np.ndarray):
