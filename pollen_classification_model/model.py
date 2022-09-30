@@ -74,7 +74,8 @@ class efficientNetB3:
         highest_score = max(result)
         class_name = CLASS_LABELS[int(np.argmax(result, axis=1))] 
         # _, image_class, class_confidence = decode_predictions(result, top=1)[0][0]
-        return "{} : {:.2f}%".format(class_name, highest_score * 100)
+        return [class_name,highest_score*100]
+        # return "{} : {:.2f}%".format(class_name, highest_score * 100)
         # return "FIXME"
 
 
