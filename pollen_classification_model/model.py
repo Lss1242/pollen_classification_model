@@ -66,12 +66,13 @@ class efficientNetB3:
         image2 = preprocess_image(image)
             
         result = self.model.predict(image2)
+        print(result)
         ### TODO ####
         ### Find the highest weight, and, using the list of CLASS_LABELS
         ### get the corresponding class name.
-        _, image_class, class_confidence = decode_predictions(result, top=1)[0][0]
-        return "{} : {:.2f}%".format(image_class, class_confidence * 100)
-        # return "FIXME"
+        # _, image_class, class_confidence = decode_predictions(result, top=1)[0][0]
+        # return "{} : {:.2f}%".format(image_class, class_confidence * 100)
+        return "FIXME"
 
 
 
